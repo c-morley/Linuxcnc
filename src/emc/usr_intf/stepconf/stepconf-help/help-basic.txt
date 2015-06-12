@@ -1,0 +1,43 @@
+Basic Machine Page
+
+Machine Basics:
+    Pick the name of the configuration- spaces will be 
+    converted to under-score.
+    Pick the available axis.
+    Pick metric or standard units for pncconf data entry.
+
+Axis Configuration:
+Choose XYZ (Mill), XYZA (4-axis mill) or XZ (Lathe).
+
+Machine Units:
+Choose Inch or mm. All subsequent entries will be in the chosen units. Changing this also changes the default values in the Axes section. If you change this after selecting values in any of the axes sections, they will be over-written by the default values of the selected units. 
+
+Driver Type:
+If you have one of the stepper drivers listed in the pull down box, choose it. Otherwise, select Other and find the timing values in your driver’s data sheet and enter them as nano seconds in the Driver Timing Settings. If the data sheet gives a value in microseconds, multiply by 1000. For example, enter 4.5us as 4500ns. 
+
+Additional signal conditioning or isolation such as optocouplers and RC filters on break out boards can impose timing constraints of their own, in addition to those of the driver. You may find it necessary to add some time to the drive requirements to allow for this.
+
+The LinuxCNC Configuration Selector has configs for Sherline already configured.
+
+Step Time:
+How long the step pulse is on in nano seconds. If your not sure about this setting a value of 20,000 will work with most drives. 
+
+Step Space:
+Minimum time between step pulses in nano seconds. If your not sure about this setting a value of 20,000 will work with most drives. 
+
+Direction Hold:
+How long the direction pin is held after a change of direction in nanoseconds. If your not sure about this setting a value of 20,000 will work with most drives. 
+
+Direction Setup:
+How long before a direction change after the last step pulse in nanoseconds. If your not sure about this setting a value of 20,000 will work with most drives. 
+
+One / Two Parport:
+Select how many parallel port are to be configured. 
+
+Base Period Maximum Jitter:
+Enter the result of the Latency Test here. To run a latency test press the Test Base Period Jitter button. See the Latency Test section for more details. 
+
+Max Step Rate:
+Stepconf automatically calculates the Max Step Rate based on the driver characteristics entered and the latency test result.
+
+Min Base Period: Stepconf automatically determines the Min Base Period based on the driver characteristics entered and latency test result.

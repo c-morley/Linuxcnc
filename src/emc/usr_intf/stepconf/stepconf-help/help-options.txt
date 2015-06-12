@@ -1,0 +1,19 @@
+
+Include Halui:
+This will add the Halui user interface component. 
+See the Integrator Manual for more information on Halui.
+
+Include pyVCP:
+This option adds the pyVCP panel base file or a sample 
+file to work on. See the Integrator Manual for more information 
+on pyVCP.
+
+Include ClassicLadder PLC:
+This option will add the ClassicLadder PLC 
+(Programmable Logic Controller). See the Integrator Manual 
+for more information on ClassicLadder.
+
+Onscreen Prompt For Tool Change:
+If this box is checked, LinuxCNC will pause and prompt you to 
+change the tool when M6 is encountered. This feature is usually
+only useful if you have presettable tools.

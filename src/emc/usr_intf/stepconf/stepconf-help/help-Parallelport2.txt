@@ -1,0 +1,7 @@
+The second Parallel port (if selected) can be configured
+and It’s pins assigned on this page.
+No step and direction signals can be selected.
+You may select in or out to maximizes the number of
+input/output pins that are available.
+You may specify the address as a hexidecimal (often 0x378)
+or as linux’s default port number (probably 1).
