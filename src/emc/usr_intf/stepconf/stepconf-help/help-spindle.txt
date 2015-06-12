@@ -1,0 +1,54 @@
+This page only appears when Spindle PWM is chosen in 
+the Parallel Port Pinout page for one of the outputs.
+
+Spindle Speed Control
+
+PWM Rate:
+The carrier frequency of the PWM signal to the spindle. 
+Enter 0 for PDM mode, which is useful for generating an 
+analog control voltage. Refer to the documentation for your 
+spindle controller for the appropriate value.
+
+Speed 1 and 2, PWM 1 and 2:
+The generated configuration file uses a simple linear 
+relationship to determine the PWM value for a given RPM value. 
+If the values are not known, they can be determined. For more
+information see Determining Spindle Calibration.
+
+Spindle-synchronized motion
+
+When the appropriate signals from a spindle encoder are connected 
+to LinuxCNC via HAL, LinuxCNC supports lathe threading. These 
+signals are:
+
+Spindle Index:
+Is a pulse that occurs once per revolution of the spindle.
+
+Spindle Phase A:
+This is a pulse that occurs in multiple equally-spaced locations 
+as the spindle turns.
+
+Spindle Phase B (optional):
+This is a second pulse that occurs, but with an offset from Spindle 
+Phase A. The advantages to using both A and B are direction sensing, 
+increased noise immunity, and increased resolution.
+
+For Spindle Phase A and Spindle Index
+
+Use Spindle-At-Speed:
+With encoder feedback one can choose to have linuxcnc wait for the 
+spindle to reach the commanded speed before feed moves. Select this 
+ and set the close enough scale.
+
+Speed Display Filter Gain:
+Setting for adjusting the stability of the visual spindle speed display.
+
+Cycles per revolution:
+The number of cycles of the Spindle A signal during one revolution of 
+the spindle. This option is only enabled when an input has been set to 
+Spindle Phase A
+
+Maximum speed in thread:
+The maximum spindle speed used in threading. For a high spindle RPM or a 
+spindle encoder with high resolution, a low value of BASE_PERIOD is required.
+

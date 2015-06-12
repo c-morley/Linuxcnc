@@ -1,0 +1,29 @@
+You may specify the address as a hexidecimal (often 0x378)
+ or as linux’s default port number (probably 0)
+
+For each pin, choose the signal which matches your parallel
+ port pinout. Turn on the invert check box if the signal is
+  inverted (0V for true/active, 5V for false/inactive).
+
+Output pinout presets:
+Automatically set pins 2 through 9 according to the Sherline
+ standard (Direction on pins 2, 4, 6, 8) or the Xylotex standard
+ (Direction on pins 3, 5, 7, 9).
+
+Inputs and Outputs:
+If the input or output is not used set the option to Unused.
+
+External E Stop:
+This can be selected from an input pin drop down box. A typical E
+ Stop chain uses all normally closed contacts.
+
+Homing & Limit Switches:
+These can be selected from an input pin drop down box for most
+ configurations.
+
+Charge Pump:
+If your driver board requires a charge pump signal select Charge
+Pump from the drop down list for the output pin you wish to connect
+to your charge pump input. The charge pump output is connected to 
+the base thread by Stepconf. The charge pump output will be about 
+1/2 of the maximum step rate shown on the Basic Machine Configuration page.
