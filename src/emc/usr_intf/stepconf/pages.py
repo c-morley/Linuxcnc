@@ -138,6 +138,9 @@ class Pages:
                 dbg("State changed to %s"% state)
                 break
 
+    def on_button_help_clicked(self,widget):
+        print "Help is clicked"
+
 #####################################################
 # All Page Methods
 #####################################################
@@ -634,6 +637,8 @@ class Pages:
     def axisx_finish(self):
         self.axis_done('x')
     # AXIS X callbacks
+
+    ####################################
     def on_xsteprev_changed(self, *args): self.a.update_pps('x')
     def on_xmicrostep_changed(self, *args): self.a.update_pps('x')
     def on_xpulleyden_changed(self, *args): self.a.update_pps('x')
@@ -651,6 +656,8 @@ class Pages:
     def axisy_finish(self):
         self.axis_done('y')
     # AXIS Y callbacks
+
+    ################################3
     def on_ysteprev_changed(self, *args): self.a.update_pps('y')
     def on_ymicrostep_changed(self, *args): self.a.update_pps('y')
     def on_ypulleyden_changed(self, *args): self.a.update_pps('y')
@@ -668,6 +675,8 @@ class Pages:
     def axisz_finish(self):
         self.axis_done('z')
     # AXIS Z callbacks
+
+    #################################
     def on_zsteprev_changed(self, *args): self.a.update_pps('z')
     def on_zmicrostep_changed(self, *args): self.a.update_pps('z')
     def on_zpulleyden_changed(self, *args): self.a.update_pps('z')
@@ -685,6 +694,8 @@ class Pages:
     def axisu_finish(self):
         self.axis_done('u')
     # AXIS U callbacks
+
+    ###############################
     def on_usteprev_changed(self, *args): self.a.update_pps('u')
     def on_umicrostep_changed(self, *args): self.a.update_pps('u')
     def on_upulleyden_changed(self, *args): self.a.update_pps('u')
@@ -702,6 +713,8 @@ class Pages:
     def axisv_finish(self):
         self.axis_done('v')
     # AXIS V callbacks
+
+    ############################
     def on_vsteprev_changed(self, *args): self.a.update_pps('v')
     def on_vmicrostep_changed(self, *args): self.a.update_pps('v')
     def on_vpulleyden_changed(self, *args): self.a.update_pps('v')
@@ -719,6 +732,8 @@ class Pages:
     def axisa_finish(self):
         self.axis_done('a')
     # AXIS A callbacks
+
+    ###########################
     def on_asteprev_changed(self, *args): self.a.update_pps('a')
     def on_amicrostep_changed(self, *args): self.a.update_pps('a')
     def on_apulleyden_changed(self, *args): self.a.update_pps('a')
@@ -877,7 +892,7 @@ class Pages:
     def finished_finish(self):
         self.a.buid_config()
 
-# BOILER CODE
+    # BOILER CODE
     def __getitem__(self, item):
         return getattr(self, item)
     def __setitem__(self, item, value):
