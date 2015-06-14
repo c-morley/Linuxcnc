@@ -488,7 +488,7 @@
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="use_action_appearance">False</property>
-                    <signal name="activate" handler="on_button_help_activate" swapped="no"/>
+                    <signal name="clicked" handler="on_button_help_clicked" swapped="no"/>
                     <child>
                       <object class="GtkLabel" id="label_help">
                         <property name="visible">True</property>
@@ -499,7 +499,6 @@
                         <attributes>
                           <attribute name="weight" value="bold"/>
                         </attributes>
-                        <signal name="activate-current-link" handler="on_label_help_activate_current_link" swapped="no"/>
                       </object>
                     </child>
                   </object>
